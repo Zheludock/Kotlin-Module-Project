@@ -1,3 +1,6 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    println("Добро пожаловать в приложение \"Заметки\"!")
+    printChoise("архив")
+    cycleIsFun("В настоящее время создано ${Container.archives.size} архивов.",
+        { Container.createArchive() }, { canLook() })
 }
