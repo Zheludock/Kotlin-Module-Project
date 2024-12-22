@@ -17,9 +17,8 @@ fun printChoise2(){
 
 fun <T>printList(list: MutableList<T>) = list.forEachIndexed { index, element -> println("${index + 1}. $element") }
 
-fun cycleIsFun(text: String, fun1:() -> Unit, fun2:() -> Unit){
+fun cycleIsFun(fun1:() -> Unit, fun2:() -> Unit){
     while(true){
-        println(text)
         when(input("номер команды")){
             "1" -> fun1()
             "2" -> fun2()
@@ -49,7 +48,6 @@ fun inArchives(){
     if(input in 0 until  Container.archives.size) {
         val selectedArchive = Container.archives[input]
         printChoise("заметку")
-        cycleIsFun("Вот все заметки в этом архиве: \n ${printList(selectedArchive.notes)}",
-            { selectedArchive.createNote() }, { isInSize(selectedArchive) })
+        cycleIsFun({ selectedArchive.createNote() }, { isInSize(selectedArchive) })
     }
 }

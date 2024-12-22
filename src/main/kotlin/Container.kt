@@ -9,6 +9,6 @@ object Container {
     fun lookContainer(){
         printList(archives)
         printChoise2()
-        cycleIsFun("Список архивов: ", { inArchives() }, { printWrong() })
+        cycleIsFun({ inArchives() }, { printWrong() })
     }
 }
