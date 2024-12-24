@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
     println("Добро пожаловать в приложение \"Заметки\"!")
-    printChoise("архив")
-    cycleIsFun({ Container.createArchive() }, { canLook() })
+    Container.printChoise("архив")
+    Container.selectAction({ Container.createArchive() }, { Container.canLook() })
 }
