@@ -2,7 +2,7 @@ fun input(name: String): String {
     while (true) {
         println("Введите $name")
         val result = readln()
-        if (result.isEmpty()) {
+        if (result.trim(' ').isEmpty()) {
             println("Ввод не может быть пустым!")
             continue
         }
